@@ -7,20 +7,20 @@ import { HiOutlineMail } from 'react-icons/hi';
 
 export default function Footer() {
   return (
-    <footer className="bg-white py-10  text-[24] font-sans">
-      <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+    <div className="bg-white py-10 text-[24px] font-medium w-full">
+      <div className="mx-auto grid grid-cols-1 md:grid-cols-4 gap-2">
         
         {/* Logo + Social */}
-        <div className=" flex flex-col gap-2 justify-content items-center">
-          <Link href="/" className=" ">
+        <div className="flex flex-col gap-4 justify-center items-center">
+          <Link href="/">
             <Image
               src="https://dansolutions.vn/wp-content/uploads/2024/05/logo-horizontal-1.png"
               alt="Dan Solutions Logo"
               width={145}
-              height={66.81}
+              height={66.83}
             />
           </Link>
-          <div className="flex space-x-4 text-[#10394C] justify-content ">
+          <div className="flex space-x-4 text-primary justify-content ">
             <a href="https://www.facebook.com/dhuyenkhtn" target="_blank" rel="noopener noreferrer">
               <FaFacebookF className="w-5 h-5" />
             </a>
@@ -32,9 +32,9 @@ export default function Footer() {
         </div>
 
         {/* DỊCH VỤ */}
-        <div>
-          <h2 className="text-lg font-semibold mb-4">DỊCH VỤ</h2>
-          <ul className="space-y-2 text-gray-700">
+        <div className='text-[#10394C]'>
+          <h2 className="text-lg mb-4 text-[24px] font-[600] text-[#222222]">DỊCH VỤ</h2>
+          <ul className="space-y-2 text-gray-700 text-[16px]">
             <li><Link href="/du-an">Thiết kế và phát triển website</Link></li>
             <li>Gia công phần mềm theo yêu cầu</li>
             <li><Link href="/du-an">Phát triển ứng dụng mobile</Link></li>
@@ -45,9 +45,9 @@ export default function Footer() {
         </div>
 
         {/* LĨNH VỰC */}
-        <div>
-          <h2 className="text-lg font-semibold mb-4">LĨNH VỰC</h2>
-          <ul className="space-y-2 text-gray-700">
+        <div className='text-[#10394C]'>
+          <h2 className="text-lg font-semibold mb-4 text-[24px] text-primary">LĨNH VỰC</h2>
+          <ul className="space-y-2 text-gray-700 text-[16px]">
             <li>Thương mại điện tử – Ecommerce</li>
             <li>Fintech – Tài Chính Công Nghệ</li>
             <li>EdTech – Giáo Dục</li>
@@ -56,9 +56,9 @@ export default function Footer() {
         </div>
 
         {/* LIÊN HỆ */}
-        <div>
-          <h2 className="text-lg font-semibold mb-4">LIÊN HỆ </h2>
-          <ul className="space-y-2 text-gray-700">
+        <div >
+          <h2 className="text-lg font-semibold mb-4 text-[24px] text-primary ">LIÊN HỆ </h2>
+          <ul className="space-y-2 text-[#000000] font-[400] text-[16px]">
             <li className="flex items-center gap-2">
               <HiOutlineMail className="w-5 h-5 text-[#10394C]" />
               <a href="mailto:huyenpv@dansolutions.vn">huyenpv@dansolutions.vn</a>
@@ -74,6 +74,6 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-    </footer>
+    </div>
   );
 }
