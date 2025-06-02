@@ -25,19 +25,19 @@ export default function CountBanner() {
   return (
     <section
       className="relative bg-cover bg-center bg-no-repeat py-20 overflow-hidden"
-      style={{ backgroundImage: "url('/images/banner-dan-2.jpg')" }} // ảnh gốc
+      style={{ backgroundImage: "url('/images/banner-dan-2.jpg')" }} 
     >
-      {/* Overlay đen mờ */}
+
       <div className="absolute inset-0 bg-black opacity-0 z-0" />
 
-      {/* Ảnh phủ đè lên ảnh gốc */}
+  
       <img
-        src='/images/banner-dan-3.jpg' // ảnh đè phủ toàn bộ ảnh gốc
+        src='/images/banner-dan-3.jpg' 
         alt="overlay image"
-        className="absolute inset-0 w-full h-full object-cover z-10 opacity-60" // có thể thay đổi opacity nếu cần
+        className="absolute inset-0 w-full h-full object-cover z-10 opacity-60" 
       />
 
-      {/* Nội dung */}
+ 
       <div className="relative z-20 max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-center items-center gap-12">
         {stats.map((item, idx) => (
           <div key={idx} className="flex flex-col items-center text-white text-center">

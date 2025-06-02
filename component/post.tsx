@@ -10,7 +10,8 @@ interface PostProps {
 
 export default function Post({ image, title, excerpt, date, category }: PostProps) {
   return (
-    <div className="border rounded-md overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+    <div className="w-[368px]   overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+
       <div className="relative w-full h-60">
         <Image src={image} alt={title} fill className="object-cover" />
       </div>

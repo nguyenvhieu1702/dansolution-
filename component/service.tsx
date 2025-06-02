@@ -36,25 +36,31 @@ const services = [
   },
 ];
 
-export default function Section() {
+export default function Service() {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 text-center">
-        <h2 className="text-3xl font-bold text-slate-900 mb-4 uppercase">DỊCH VỤ CỦA CHÚNG TÔI</h2>
-        <p className="text-gray-600 max-w-2xl mx-auto mb-8">
+        <h2 className="text-4xl font-bold mb-4 uppercase">DỊCH VỤ CỦA CHÚNG TÔI</h2>
+        <p className="max-w-2xl mx-auto mb-8 text-base font-normal text-[#111633] ">
           Nhiệm vụ hàng đầu của DanSolution là mang đến những trải nghiệm dịch vụ công nghệ hàng đầu cho khách hàng. Sự hài lòng của quý vị chính là mục tiêu thành công của chúng tôi.
         </p>
-        <div className="h-1 w-20 bg-orange-500 mx-auto mb-12 rounded-full" />
+        <div className="flex items-center justify-center gap-2 mb-12">
+          <span className="w-1 h-1 bg-orange-500 rounded-full"></span>
+          <span className="w-1 h-1 bg-orange-500 rounded-full"></span>
+          <span className="w-1 h-1 bg-orange-500 rounded-full"></span>
+          <div className="h-1 w-[30px] bg-orange-500 rounded-full"></div>
+        </div>
+
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 text-left">
           {services.map((item, idx) => (
             <div key={idx} className="flex items-start gap-4">
-              <div className="bg-white shadow-lg rounded-full p-4">
+              <div className="bg-white shadow-lg rounded-full p-5">
                 {item.icon}
               </div>
               <div>
-                <h3 className="text-lg font-bold text-slate-900 mb-1 uppercase">{item.title}</h3>
-                <p className="text-gray-700">{item.description}</p>
+                <h3 className="text-lg font-bold mb-1 uppercase">{item.title}</h3>
+                <p className="text-base font-normal">{item.description}</p>
               </div>
             </div>
           ))}

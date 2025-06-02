@@ -39,8 +39,13 @@ export default function Partner() {
   return (
     <section className="py-12 bg-white">
       <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold text-gray-800">ĐỐI TÁC & KHÁCH HÀNG</h2>
-        <div className="w-20 h-1 mx-auto mt-2 bg-green-600 rounded-full" />
+        <h2 className="text-4xl font-bold text-gray-800 mb-[15px]">ĐỐI TÁC & KHÁCH HÀNG</h2>
+        <div className="flex items-center justify-center gap-2 mb-12">
+          <span className="w-1 h-1 bg-orange-500 rounded-full"></span>
+          <span className="w-1 h-1 bg-orange-500 rounded-full"></span>
+          <span className="w-1 h-1 bg-orange-500 rounded-full"></span>
+          <div className="h-1 w-[30px] bg-orange-500 rounded-full"></div>
+        </div>
       </div>
       <Swiper
         modules={[Autoplay]}

@@ -2,23 +2,27 @@
 export default function MainBanner() {
   return (
     <section className="relative w-full h-[600px] md:h-[700px] overflow-hidden">
-      {/* Background image */}
       <div
-        className="absolute inset-0 bg-cover bg-center opacity-70"
+        className="absolute inset-0 bg-cover bg-top bg-no-repeat opacity-70"
         style={{
-          backgroundImage: "url('/images/chuyen-doi-so.jpg')", // 👉 đổi thành đường dẫn ảnh của bạn
+          backgroundImage: "url('/images/chuyen-doi-so.jpg')",
         }}
         aria-hidden="true"
       />
 
-      {/* Overlay đen nhẹ để làm nổi chữ */}
-      <div className="absolute inset-0 bg-black/50" />
 
-      {/* Nội dung */}
+
+      <div className="absolute inset-0 bg-black/50" />
       <div className="relative z-10 max-w-4xl mx-auto px-6 py-16 text-white text-left flex flex-col justify-center h-full">
-        <p className="text-sm font-semibold tracking-widest text-orange-400 mb-2">CÁCH MẠNG</p>
-        <h1 className="text-4xl md:text-5xl font-extrabold mb-4">CHUYỂN ĐỔI SỐ</h1>
-        <p className="text-lg leading-relaxed mb-8">
+        <div className="flex items-center mb-2">
+          <div className="w-[40px] h-px bg-[#ff712b] mr-3   " />
+          <p className="text-base font-semibold tracking-widest text-white">
+            CÁCH MẠNG
+          </p>
+        </div>
+
+        <h1 className="text-[58px] md:text-5xl font-bold mb-4">CHUYỂN ĐỔI SỐ</h1>
+        <p className="text-[19px] font-medium leading-[32px] mb-8">
           DAN Solutions dẫn đầu chuyển đổi số, giúp doanh nghiệp nâng cao hiệu suất, giảm chi phí và tự động hóa quy trình trong kỷ nguyên 4.0.
           Với công nghệ tiên tiến, chúng tôi đồng hành cùng đối tác khám phá tiềm năng số, thúc đẩy thành công trong mỗi bước đi.
         </p>

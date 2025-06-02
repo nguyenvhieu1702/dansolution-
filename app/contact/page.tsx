@@ -4,7 +4,6 @@ import Image from "next/image";
 const Contact = () => {
     return (
         <div className="flex flex-col">
-            {/* Header background với chữ "Liên Hệ" */}
             <div className="relative w-full h-[300px] md:h-[400px]">
                 <Image
                     src="/images/banner-dan.jpg"

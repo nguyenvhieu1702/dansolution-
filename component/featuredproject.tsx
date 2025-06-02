@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 const projects = [
   {
-    src: '/images/project-1.png', // Thay bằng ảnh của bạn trong thư mục public/images
+    src: '/images/project-1.png',
     alt: 'Nam Canada',
     type: 'Website',
   },
@@ -32,34 +32,43 @@ export default function FeaturedProject() {
     <section className="py-16 bg-white text-center">
       <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">DỰ ÁN TIÊU BIỂU</h2>
       <div className="w-24 h-1 bg-black mx-auto mb-8" />
-
-      <div className="flex justify-center gap-4 mb-8 flex-wrap">
+      <div className="flex justify-center flex-wrap mb-8">
         {categories.map((cat) => (
           <button
             key={cat}
             onClick={() => setActive(cat)}
-            className={`px-5 py-2 rounded-md font-medium transition ${
-              active === cat ? 'bg-black text-white' : 'bg-gray-200 text-black hover:bg-gray-300'
-            }`}
+            className={`text-[13px] font-medium rounded-md px-[12px] py-[8px] mr-[3px] mb-[3px] transition
+        ${active === cat
+                ? 'bg-[#555555] opacity-80 text-white'
+                : 'bg-[#333333] text-white hover:bg-[#555555] hover:opacity-80'
+              }
+`}
           >
             {cat}
           </button>
         ))}
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 md:px-0 max-w-6xl mx-auto">
+
+      <div className="flex flex-wrap justify-center gap-3 px-4 md:px-0 max-w-6xl mx-auto">
         {filtered.map((project, index) => (
-          <div key={index} className="border rounded-md overflow-hidden shadow-sm hover:shadow-md transition">
+          <div
+            key={index}
+            className="w-[367.95px] h-[248px] box-border border overflow-hidden shadow-sm hover:shadow-md transition"
+          >
             <Image
               src={project.src}
               alt={project.alt}
-              width={800}
-              height={600}
-              className="w-full h-auto object-cover"
+              width={368} // bạn có thể làm tròn
+              height={248}
+              unoptimized
+              className="w-full h-full object-cover"
             />
           </div>
+
         ))}
       </div>
+
     </section>
   )
 }

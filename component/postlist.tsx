@@ -30,10 +30,16 @@ const newsData = [
 
 export default function PostList() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div className="flex flex-wrap justify-center">
       {newsData.map((item, index) => (
-        <Post key={index} {...item} />
+        <div
+          key={index}
+          style={{ margin: '0px 10px 30px', width: '368px' }}
+        >
+          <Post {...item} />
+        </div>
       ))}
     </div>
+
   );
 }
