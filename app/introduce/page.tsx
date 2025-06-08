@@ -1,4 +1,5 @@
-import Team from "@/component/team";
+import BannerProduct from "@/components/banner-product";
+import Team from "@/components/team";
 import Image from "next/image";
 
 const Introduce = () => {
@@ -19,6 +20,9 @@ const Introduce = () => {
             <div className="px-4 md:px-20 py-10 bg-white">
                 <Team/>
             
+            </div>
+            <div>
+                <BannerProduct/>
             </div>
         </div>
 

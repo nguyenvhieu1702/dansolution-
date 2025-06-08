@@ -1,4 +1,4 @@
-import FeaturedProject from "@/component/featuredproject";
+import FeaturedProject from "@/components/featuredproject";
 import Image from "next/image";
 const Project = () => {
     return (

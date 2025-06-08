@@ -1,4 +1,4 @@
-import PostList from "@/component/postlist";
+import PostList from "@/components/postlist";
 import Image from "next/image";
 
 const Blog = () => {

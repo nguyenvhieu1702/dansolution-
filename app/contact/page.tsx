@@ -1,4 +1,4 @@
-import FormContact from "@/component/formcontact";
+import FormContact from "@/components/formcontact";
 import Image from "next/image";
 
 const Contact = () => {

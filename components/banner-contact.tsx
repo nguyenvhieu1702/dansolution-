@@ -18,10 +18,10 @@ export default function BannerContact() {
           </h2>
 
           <div className="flex justify-center gap-4 flex-wrap">
-            <button className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded transition">
+            <button className="bg-[#5B9365] hover:bg-[#4E7F57] text-white px-6 py-2 rounded transition w-3xs">
               Bắt đầu
             </button>
-            <button className="border border-green-600 text-green-600 hover:bg-green-50 px-6 py-2 rounded transition">
+            <button className="border border-[#5B9365] text-green-600 hover:bg-[#4E7F57] hover:text-white px-6 py-2 rounded transition w-3xs">
               Liên hệ
             </button>
           </div>

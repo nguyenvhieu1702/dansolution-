@@ -1,8 +1,9 @@
 'use client'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Autoplay } from 'swiper/modules'
+import { Autoplay, FreeMode } from 'swiper/modules'
 import 'swiper/css'
+import 'swiper/css/free-mode'
 
 const logos = [
   {
@@ -47,29 +48,36 @@ export default function Partner() {
           <div className="h-1 w-[30px] bg-orange-500 rounded-full"></div>
         </div>
       </div>
-      <Swiper
-        modules={[Autoplay]}
-        spaceBetween={15}
-        slidesPerView={5}
-        loop
-        autoplay={{ delay: 3000, pauseOnMouseEnter: true }}
-        breakpoints={{
-          320: { slidesPerView: 1 },
-          640: { slidesPerView: 2 },
-          1024: { slidesPerView: 5 },
-        }}
-        className="max-w-6xl mx-auto px-4"
-      >
-        {logos.map((logo, index) => (
-          <SwiperSlide key={index} className="flex justify-center items-center">
-            <img
-              src={logo.src}
-              alt={logo.alt}
-              className="object-contain h-20 transition duration-300"
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      
+<Swiper
+  modules={[Autoplay, FreeMode]}
+  spaceBetween={15}
+  slidesPerView={5}
+  loop
+  freeMode={true}
+  speed={4000} // tốc độ chuyển động (ms)
+  autoplay={{
+    delay: 0, // không delay giữa các lần chuyển
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true,
+  }}
+  breakpoints={{
+    320: { slidesPerView: 1 },
+    640: { slidesPerView: 2 },
+    1024: { slidesPerView: 5 },
+  }}
+  className="max-w-6xl mx-auto px-4"
+>
+  {logos.map((logo, index) => (
+    <SwiperSlide key={index} className="flex justify-center items-center">
+      <img
+        src={logo.src}
+        alt={logo.alt}
+        className="object-contain h-20 transition duration-300"
+      />
+    </SwiperSlide>
+  ))}
+</Swiper>
     </section>
   )
 }
